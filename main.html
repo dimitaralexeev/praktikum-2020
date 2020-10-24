@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Hello JQUERY!</title>
+        <meta name="description" content="This is my first head bump with JQUERY">
+    </head>
+   
+    <body>
+        <h1 id="first">Hello Cruel World</h1>
+        <h1 class="test">Second</h1>
+        <h1>Third</h1>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+        <script>
+            $("#first").click(function(){
+                alert("Hello");
+            });
+
+            $(".test").click(function(){
+                $(this).hide();
+            });
+
+            $("h1").click(function(){
+                $(this).text("cool");
+            })
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Comics</title>
+        <meta name="description" content="This is my first head bump with JQUERY">
+    </head>
+   
+    <body>
+        <img src="img/pic1.jpg" id="image">
+
+        <button id="previous">previous</button>
+        <button id="next">next</button>
+        <button id="random">random</button>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                var images = ["img/pic1.jpg", "img/pic2.jpg", "img/pic3.jpg", "img/pic4.jpg"];
+                var index = 0;
+
+                var timer = setInterval(changePicture, 5000);
+
+                function changePicture(){
+                    $("#next").trigger("click");
+                }
+
+                $("#random").click(function(){
+                   randomNumber = Math.floor(random() * 4);
+
+                   $("#image").attr('src', images[randomNumber]);
+                });
+                
+                $("#previous").click(function(){
+                    if(index == 0){
+                        return;
+                    }
+ 
+                    index --;
+
+                    $("#image").attr('src', images[index]);
+
+                    if(index == 0){
+                        $("#previous").hide();
+                    }
+                });
+
+                $("#next").click(function(){
+                    if(index == images.length - 1){
+                        return;
+                    }
+
+                    index ++;
+
+                    $("#image").attr('src', images[index]);
+
+                    $("#previous").show();
+
+                    if(index == images.length - 1){
+                        $("#next").hide();
+                        clearInterval(timer);
+                    }
+                });
+
+                $("#previous").hide();
+            })  
+        </script>
+    </body>
+
+</html>
