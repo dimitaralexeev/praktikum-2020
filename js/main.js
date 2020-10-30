@@ -1,45 +1,49 @@
-var lenght = 16;
-var lastName = "Johnson";
+// var lenght = 16;
+// var lastName = "Johnson";
 
-var cars = ["Saab", "Volvo", "BMW"];
+// var cars = ["Saab", "Volvo", "BMW"];
 
-var person = {
-    firstName: "John",
-    lastName: "Doe",
-    address: {
-        street: "ul. preslav",
-        number: 21,
-    },
-    pets: ["cat", "dog", "fish"],
-}
+// var person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     address: {
+//         street: "ul. preslav",
+//         number: 21,
+//     },
+//     pets: ["cat", "dog", "fish"],
+// }
 
-var person2 = {
-    firstName: "John",
-    lastName: "Doe",
-    address: {
-        street: "ul. preslav",
-        number: 21,
-    },
-    pets: ["cat", "fish"],
-}
+// var person2 = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     address: {
+//         street: "ul. preslav",
+//         number: 21,
+//     },
+//     pets: ["cat", "fish"],
+// }
 
-function getPersonPets(person){
-   person.pets.forEach(function(pet){
-       console.log(pet);
-   })
-}
+// function getPersonPets(person){
+//    person.pets.forEach(function(pet){
+//        console.log(pet);
+//    })
+// }
 
-function checkPersonForDog(){
-    var hasDog = false;
-    if(person.pets.indexOf("dog") !== -1){
-        hasDog = true;
-    }
+// function checkPersonForDog(){
+//     var hasDog = false;
+//     if(person.pets.indexOf("dog") !== -1){
+//         hasDog = true;
+//     }
 
-    return hasDog;
-}
+//     return hasDog;
+// }
 
-/*var dogCheckInterval = setInterval(function(){
-    var hasDog = checkPersonForDog(person2);
-    console.log('hasDog');
-}, 3000);
-*/
+// var dogCheckInterval = setInterval(function(){
+//     var hasDog = checkPersonForDog(person2);
+//     console.log('hasDog');
+// }, 3000);
+
+const person = "Ivan";
+const person2 = "Peter";
+
+console.log('${person} and ${person2} are friends');
